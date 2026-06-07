@@ -1,55 +1,271 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nepatech Group</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;line-height:1.6}
-header{background:#ff7a00;color:white;padding:40px;text-align:center}
-nav{background:#222;padding:10px;text-align:center}
-nav a{color:white;margin:0 15px;text-decoration:none}
-section{padding:40px;max-width:1100px;margin:auto}
-.card{background:#f7f7f7;padding:20px;border-radius:8px}
-footer{background:#222;color:white;text-align:center;padding:20px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepatech Group - Solusi Kalibrasi & Laboratorium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Gaya Visual: Clean, Minimalis, Modern Korporat */
+        /* Dominasi warna Putih (#ffffff) dan Oranye (#ff6600) */
+        :root {
+            --primary-color: #ff6600; /* Oranye */
+            --dark-color: #222222;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-bg);
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: var(--gray);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: var(--white);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        ol, ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Grid untuk Galeri */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background-color: var(--light-bg);
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eaeaea; /* Placeholder jika gambar belum ada */
+        }
+
+        .gallery-item p {
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-<header>
-<h1>Nepatech Group</h1>
-<p>Konsultasi, Kalibrasi, dan Laboratory Supply</p>
-</header>
-<nav>
-<a href="#profil">Profil</a>
-<a href="#layanan">Layanan</a>
-<a href="#berita">Berita</a>
-<a href="#galeri">Galeri</a>
-</nav>
-<section id="profil">
-<h2>Profil Perusahaan</h2>
-<div class="card">
-<h3>Visi</h3>
-<p>Terdepan dan terpercaya dalam menyediakan solusi konsultasi, kalibrasi, dan laboratory supply yang berstandar internasional.</p>
-<h3>Misi</h3>
-<ol>
-<li>Memberikan pelayanan dengan akurasi tinggi dan standar internasional.</li>
-<li>Menyediakan produk laboratorium berkualitas internasional dan mengandung unsur TKDN.</li>
-<li>Memberikan edukasi teknis yang prima kepada pelanggan.</li>
-</ol>
-</div>
-</section>
-<section id="layanan">
-<h2>Bidang Usaha</h2>
-<p>Penyedia jasa kalibrasi, konsultan, dan suplai kebutuhan laboratorium.</p>
-</section>
-<section id="berita">
-<h2>Berita</h2>
-<p>Silakan tambahkan artikel tugas 1 di sini.</p>
-</section>
-<section id="galeri">
-<h2>Galeri</h2>
-<p>Silakan tambahkan brosur dan foto kegiatan.</p>
-</section>
-<footer>© Nepatech Group</footer>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">Nepatech<span>Group</span></div>
+            <ul class="nav-links">
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Nepatech Lab Solution Blog</h1>
+        <p>Solusi terpercaya untuk kebutuhan konsultasi, kalibrasi, dan suplai laboratorium berstandar internasional.</p>
+    </div>
+
+    <div class="container">
+        
+        <section id="profil">
+            <h2>Profil Perusahaan</h2>
+            
+            <h3>Visi</h3>
+            <p style="font-style: italic; font-size: 17px; margin-bottom: 15px;">
+                "Terdepan dan terpercaya dalam menyediakan solusi konsultasi, kalibrasi, dan laboratory supply yang berstandar internasional"
+            </p>
+            
+            <h3>Misi</h3>
+            <ol>
+                <li>Memberikan pelayanan dengan akurasi tinggi dan standar internasional.</li>
+                <li>Menyediakan produk laboratorium berkualitas internasional dan mengandung unsur TKDN.</li>
+                <li>Memberikan edukasi teknis yang prima kepada pelanggan.</li>
+            </ol>
+            
+            <h3>Struktur Organisasi</h3>
+            <ul>
+                <li>Direktur Utama</li>
+                <li>Manajer Operasional</li>
+                <li>Manajer Kalibrasi</li>
+                <li>Teknisi Kalibrasi</li>
+                <li>Logistik</li>
+                <li>Pemasaran</li>
+            </ul>
+            
+            <h3>Bidang Usaha</h3>
+            <p>Penyedia jasa kalibrasi dan konsultan serta suplai kebutuhan laboratorium.</p>
+        </section>
+
+        <section id="berita">
+            <h2>Berita & Press Release</h2>
+            <h3>[Masukkan Judul Press Release Tugas 1 Anda di Sini]</h3>
+            <p style="color: var(--gray); font-size: 14px; margin-bottom: 15px;">Dipublikasikan pada: Juni 2026</p>
+            <p>
+                Silakan ganti teks ini dengan isi tulisan/Press Release yang telah Anda buat pada Tugas 1. Paragraf ini berfungsi sebagai dokumentasi komunikasi eksternal perusahaan kepada publik mengenai perkembangan atau kegiatan terbaru dari Nepatech Group.
+            </p>
+        </section>
+
+        <section id="galeri">
+            <h2>Galeri Kegiatan</h2>
+            <p>Dokumentasi produk dan aktivitas komunikasi operasional perusahaan.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="brosur.jpg" alt="Brosur Tugas 2">
+                    <p>Brosur Produk (Tugas 2)</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="kegiatan1.jpg" alt="Foto Kegiatan 1">
+                    <p>Foto Kegiatan Komunikasi 1</p>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="kegiatan2.jpg" alt="Foto Kegiatan 2">
+                    <p>Foto Kegiatan Komunikasi 2</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nepatech Group. All Rights Reserved. Created for Weblog Assignment.</p>
+    </footer>
+
 </body>
 </html>
